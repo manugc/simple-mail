@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(libsimplemail VERSION 2.2.0 LANGUAGES CXX)
+project(libsimplemail VERSION 2.3.0 LANGUAGES CXX)
 
 include(GNUInstallDirs)
 
@@ -70,7 +70,7 @@ add_definitions(
     -DQT_USE_QSTRINGBUILDER
     -DQT_NO_SIGNALS_SLOTS_KEYWORDS
     -DQT_USE_FAST_OPERATOR_PLUS
-    -DQT_DISABLE_DEPRECATED_BEFORE=0x050c00
+    -DQT_DISABLE_DEPRECATED_BEFORE=0x050f00
 )
 
 include_directories(
@@ -104,3 +104,6 @@ add_subdirectory(src)
 if (BUILD_DEMOS)
     add_subdirectory(demos)
 endif ()
+
+include(CPackConfig)
+
